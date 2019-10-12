@@ -9,4 +9,11 @@ class Profile extends Model
     protected $fillable = [
         'bio', 'telephone', 'address', 'card',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    
 }
