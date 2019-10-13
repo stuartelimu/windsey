@@ -39,12 +39,14 @@ class ProfilesController extends Controller
 
         $paymentMethod = $request->input('stripeToken');
 
+        $user->addPaymentMethod($paymentMethod);
+
         $user->updateDefaultPaymentMethod($paymentMethod);
-        
+
+        $user->updateDefaultPaymentMethodFromStripe();
         
 
-        echo $nm;
-        echo $pm;
+        echo $paymentMethod;
 
         // return view('profiles.index', [
         //     'user' => $user,

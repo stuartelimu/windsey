@@ -34,7 +34,23 @@ class PlansController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $subscription = "Windsey FaaS Platform";
+        $plan = $request->input('plan');
+        $user = auth()->user();
+
+        // $user->createAsStripeCustomer();
+        
+        $paymentMethod = $user->defaultPaymentMethod()->id;
+
+        
+        $user->newSubscription($subscription, $plan)->create($paymentMethod);
+
+        // echo $paymentMethod;
+        // if ($user->subscribed($subscription)) {
+        //     echo "yes";
+        // }
+
+        return redirect()->route('plans.index')->with('success', 'Your plan subscribed successfully');
     }
 
     /**
@@ -45,7 +61,7 @@ class PlansController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('plans.index');
     }
 
     /**
