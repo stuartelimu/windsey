@@ -19,7 +19,7 @@
 </section>
 <!-- breadcrumb-end -->
 
-<!-- ================ contact section start ================= -->
+<!-- ================ register section start ================= -->
 <section class="contact-section">
     
 <div class="container">
