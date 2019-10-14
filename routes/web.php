@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
 Auth::routes();
 Route::get('/services/service-details/', 'ProductsController@details');
 Route::resource('services', 'ProductsController');

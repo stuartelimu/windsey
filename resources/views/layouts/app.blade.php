@@ -46,7 +46,9 @@
 
     @yield('content')
     
+    @section('footer')
     @include('includes.footer')
+    @endsection
     <!-- JS here -->
     <script src="{{ asset('js/vendor/modernizr-3.5.0.min.js') }}"></script>
     <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
