@@ -13,7 +13,7 @@ class PlansController extends Controller
      */
     public function index()
     {
-        return view('plans.index');
+        return view('plans.service');
     }
 
     /**

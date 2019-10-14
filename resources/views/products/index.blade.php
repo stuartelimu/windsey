@@ -37,7 +37,7 @@
             @if(count($products) > 0)
             <div class="row">
                 @foreach($products as $product)
-                <div class="col-xl-4 col-md-4">
+                <div class="col-xl-4 col-md-4 mb-5">
                     <div class="single-service">
                         <div class="service-thumb">
                             <img src="img/service/1.jpg" alt="">
@@ -58,7 +58,7 @@
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4">
+                <div class="col-xl-4 col-md-4 mb-5">
                     <div class="single-service">
                         <div class="service-thumb">
                             <img src="img/service/1.jpg" alt="">

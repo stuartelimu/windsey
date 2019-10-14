@@ -15,7 +15,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('title')->paginate(1);
+        $products = Product::all();
         return view('products.index', [
             'products' => $products
         ]);
@@ -62,12 +62,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $product = Product::find($id);
-        $products = Product::all();
-        return view('products.service-details', [
-            'product'=>$product,
-            'products' => $products,
-        ]);
+        
     }
 
     public function details()
