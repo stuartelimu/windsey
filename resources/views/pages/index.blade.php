@@ -363,46 +363,6 @@
     </div>
     <!-- cta-area-end -->
 
-    <!-- location-area-start -->
-    <div class="addres-area black-bg section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-md-4">
-                    <div class="single-address text-center">
-                        <div class="addres-icon">
-                            <img src="{{ asset('img/icon/1.png') }}" alt="">
-                        </div>
-                        <h3>Our Location</h3>
-                        <p>127, Manchaster city, London <br>
-                            86/A, green street, California, USA</p>
-                        <a class="underline-hover" href="#">Get Direction</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single-address text-center">
-                        <div class="addres-icon">
-                            <img src="{{ asset('img/icon/2.png') }}" alt="">
-                        </div>
-                        <h3>Opening hour</h3>
-                        <p>Mon-Fri (9.00-19.00) <br>
-                            Sat-Sun <a class="underline-hover" href="#">(Closed)</a></p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single-address text-center">
-                        <div class="addres-icon">
-                            <img src="{{ asset('img/icon/3.png') }}" alt="">
-                        </div>
-                        <h3>Drop a message</h3>
-                        <p>support@durg.com <br>
-                            456 267 3572</p>
-                        <a class="underline-hover" href="#">Mail Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- location-area-end -->
 
 @endsection
 
