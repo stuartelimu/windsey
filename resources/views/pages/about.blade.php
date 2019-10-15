@@ -29,7 +29,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-7 col-md-12 col-lg-6">
                     <div class="about-thumb">
-                        <img src="img/about/about.jpg') }}" alt="">
+                        <img src="{{ asset('img/about/about.jpg') }}" alt="">
                         <a class="video-icon popup-video" href="https://www.youtube.com/watch?v=vb9uYBtqmeM">
                             <i class="fa fa-play"></i>
                         </a>
