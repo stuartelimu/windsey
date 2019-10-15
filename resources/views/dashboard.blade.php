@@ -119,7 +119,26 @@
                                         <h3>Payment methods</h3>
                                         <p>Please enter your preferred payment method below. You can use a credit / debit card. 
                                         </p>
-                                        
+                                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name On Card'" placeholder="Enter Name On Card">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group" id="card-element">
+                                                    <!-- A Stripe Element will be inserted here. -->
+                                                    </div>
+                                                    <!-- Used to display form errors. -->
+                                                    <div id="card-errors" role="alert"></div>
+                                                    <input type="hidden" name="plan" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <button type="submit" class="button button-contactForm boxed-btn">Update</button>
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="details-info">
                                         <h3>Billing details</h3>
@@ -167,6 +186,84 @@
 
 @endsection
 
-@section('footer')
+@section('scripts')
+
+<script>
+
+window.onload = function () {
+
+console.log("aaa");
+// Create a Stripe client.
+var stripe = Stripe('{{ env("STRIPE_KEY") }}');
+
+// Create an instance of Elements.
+const elements = stripe.elements();
+
+// Create an instance of the card Element.
+const cardElement = elements.create('card');
+
+// Add an instance of the card Element into the `card-element` <div>.
+cardElement.mount('#card-element');
+
+// Handle form submission.
+// const form = document.getElementById('payment-form');
+// form.addEventListener('submit', function(event) {
+//   event.preventDefault();
+
+//   stripe.createToken(card).then(function(result) {
+//     if (result.error) {
+//       var errorElement = document.getElementById('card-errors');
+//       errorElement.textContent = result.error.message;
+//     } else {
+//       stripeTokenHandler(result.token);
+//     }
+//   });
+// });
+
+const cardHolderName = document.getElementById('card-holder-name');
+const cardButton = document.getElementById('card-button');
+const clientSecret = cardButton.dataset.secret;
+
+cardButton.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const { setupIntent, error } = await stripe.handleCardSetup(
+        clientSecret, cardElement, {
+            payment_method_data: {
+                billing_details: { name: cardHolderName.value }
+            }
+        }
+    );
+
+    if (error) {
+        // Display "error.message" to the user...
+        let errorElement = document.getElementById('card-errors');
+        errorElement.textContent = error.message;
+    } else {
+        // The card has been verified successfully...
+        console.log("bbb");
+        stripeTokenHandler(setupIntent);
+    }
+
+
+    
+});
+
+
+
+const stripeTokenHandler = (token) => {
+    // Insert the token ID into the form so it gets submitted to the server
+    const form = document.getElementById('payment-form');
+    const hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', token.payment_method);
+    form.appendChild(hiddenInput);
+
+    // Submit the form
+    form.submit();
+}
+
+}
+</script>
 
 @endsection
