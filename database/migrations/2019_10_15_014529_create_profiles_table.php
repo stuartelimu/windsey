@@ -20,7 +20,6 @@ class CreateProfilesTable extends Migration
             $table->text('bio');
             $table->string('telephone', 10);
             $table->string('address');
-            $table->string('card');
             $table->timestamps();
         });
     }
