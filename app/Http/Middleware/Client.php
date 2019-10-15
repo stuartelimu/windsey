@@ -20,7 +20,7 @@ class Client
         if (Auth::check() && Auth::user()->role == 'client') {
             return $next($request);
         } else {
-            return redirect('/admin');
+            return redirect('/home');
         }
     }
 }

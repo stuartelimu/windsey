@@ -77,9 +77,9 @@
                     <div class="single-footer-widget">
                         <h4>Solutions</h4>
                         <ul>
-                            <li><a href="#">Industrial problems</a></li>
-                            <li><a href="#"> Construction solution</a></li>
-                            <li><a href="#">Car manufacturing</a></li>
+                            <li><a href="#">Environmental engineering</a></li>
+                            <li><a href="#"> Agricultural engitneering</a></li>
+                            <li><a href="#">Agricultural Economist</a></li>
                             <li><a href="#">Mechanical problems</a></li>
                         </ul>
 

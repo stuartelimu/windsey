@@ -16,9 +16,9 @@
                         <div class="col-xl-7 offset-xl-1 col-lg-7">
                             <div class="slider-content">
                                 <p>Quality work. Trustable service. Dedicated team</p>
-                                <h3>We provide your Industrial solution</h3>
+                                <h3>We provide your Agricultural solution</h3>
                                 <div class="slider-btn">
-                                    <a class="boxed-btn2" href="#">Our Services <i
+                                    <a class="boxed-btn2" href="/services">Our Services <i
                                             class="Flaticon flaticon-right-arrow"></i></a>
                                 </div>
                             </div>
@@ -32,9 +32,9 @@
                         <div class="col-xl-7 offset-xl-1 col-lg-7">
                             <div class="slider-content">
                                 <p>Quality work. Trustable service. Dedicated team</p>
-                                <h3>We provide your Industrial solution</h3>
+                                <h3>We provide your Agricultural solution</h3>
                                 <div class="slider-btn">
-                                    <a class="boxed-btn2" href="#">Our Services <i
+                                    <a class="boxed-btn2" href="/services">Our Services <i
                                             class="Flaticon flaticon-right-arrow"></i></a>
                                 </div>
                             </div>
@@ -48,9 +48,9 @@
                         <div class="col-xl-7 offset-xl-1 col-lg-7">
                             <div class="slider-content">
                                 <p>Quality work. Trustable service. Dedicated team</p>
-                                <h3>We provide your Industrial solution</h3>
+                                <h3>We provide your Agricultural solution</h3>
                                 <div class="slider-btn">
-                                    <a class="boxed-btn2" href="#">Our Services <i
+                                    <a class="boxed-btn2" href="/services">Our Services <i
                                             class="Flaticon flaticon-right-arrow"></i></a>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                 <div class="section-title text-center mb-65">
                     <span>OUR SERVICES</span>
                     <h3>We provide all of your <br>
-                        industrial solution</h3>
+                        Agricultural solution</h3>
                 </div>
             </div>
             <div class="row">
@@ -112,7 +112,7 @@
                         <div class="service-thumb">
                             <img src="{{ asset('img/service/1.jpg') }}" alt="">
                         </div>
-                        <h3>Industrial construction</h3>
+                        <h3>Agricultural construction</h3>
                         <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
@@ -163,7 +163,7 @@
                                 <img src="{{ asset('img/project/1.jpg') }}" alt="">
                             </div>
                             <div class="project-info">
-                                <span>Industrial construction</span>
+                                <span>Agricultural construction</span>
                                 <h3>Research and development center</h3>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                                 <img src="{{ asset('img/project/1.jpg') }}" alt="">
                             </div>
                             <div class="project-info">
-                                <span>Industrial construction</span>
+                                <span>Agricultural construction</span>
                                 <h3>Research and development center</h3>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                     <div class="section-title mb-65">
                         <span>About Company</span>
                         <h3>Deliver inovative
-                            Industrial solution</h3>
+                            Agricultural solution</h3>
                         <p class="para-text">
                             Waters makte fish every without firmament saw had. Morning air subdue very one. Whales grass
                             is fish whales winged.
@@ -349,7 +349,7 @@
             <div class="col-xl-6 col-lg-7">
                 <div class="cta-content">
                     <h3>Let’s talk about your <br>
-                        industrial problems</h3>
+                        Agricultural problems</h3>
                     <p>Waters make fish every without firmament saw had. <br> Morning air subdue very one. Whales grass
                         is
                         fish <br> whales winged.</p>

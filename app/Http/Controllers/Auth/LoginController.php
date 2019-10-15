@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Auth;
+
+// sologic
+
 class LoginController extends Controller
 {
     /*
@@ -30,7 +34,7 @@ class LoginController extends Controller
         if (Auth::check() && Auth::user()->role == 'admin') {
             return ('/home');
         } else {
-            return('/client');
+            return('/dashboard');
         }
     }
 
