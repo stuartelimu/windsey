@@ -13,7 +13,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
                                     aria-controls="home" aria-selected="true">{{$plan}}
-                                    @if($user->subscription('Windsey FaaS Platform')->onGracePeriod()) (Grace Period) @endif</a>
+                                    </a>
                             </li>
                             
                             <li class="nav-item">
