@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use App\Plan;
+use App\User;
+
 
 
 class PlansController extends Controller
@@ -104,7 +106,7 @@ class PlansController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
@@ -115,6 +117,17 @@ class PlansController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->subscription('Windsey FaaS Platform')->cancel();
+
+        return redirect()->back()->with('success', 'Your subscription has been cancelled');
+    }
+
+    public function cancel($id)
+    {
+        $user = User::find($id);
+        $user->subscription('Windsey FaaS Platform')->cancel();
+
+        return redirect()->back()->with('success', 'Your subscription has been cancelled');
     }
 }

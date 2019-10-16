@@ -21,6 +21,8 @@ Route::get('/about', function () {
 
 
 Route::get('/dashboard', 'DashboardController@index');
+// Route::post('/sub/cancel/{id}', 'PlansController@cancel');
+
 
 Auth::routes();
 Route::get('/services/service-details/', 'ProductsController@details');
