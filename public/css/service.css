@@ -56,25 +56,14 @@
 
 .price-content ul li {
     border-bottom: 1px solid #efefef;
-    padding: 15px 10px;
-    list-style: none;
+    /* padding: 0 15px; */
 }
 
 .price-content ul li:last-child {
     border: none;
 }
 
-.price-content .fa-check-circle {
-    color: green;
-    font-size: 20px;
-    margin-right: 10px;
-}
 
-.price-content .fa-times-circle {
-    color: red;
-    font-size: 20px;
-    margin-right: 10px;
-}
 
 .price-button {
     display: inline;

@@ -116,8 +116,8 @@
                                                             <img src="img/icon/conunter-icon.png" alt="">
                                                         </div>
                                                         <div class="counter-number">
-                                                            <p>Business <span>Completed</span> </p>
-                                                            <a class="underline-hover" href="#">Get Direction</a>
+                                                            <p>Animal Geneticist <span>Completed</span> </p>
+                                                            <a class="underline-hover" href="#">Learn More</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -127,8 +127,8 @@
                                                             <img src="img/icon/conunter-icon2.png" alt="">
                                                         </div>
                                                         <div class="counter-number">
-                                                            <p><span>Dedicated team</span> Business</p>
-                                                            <a class="underline-hover" href="#">Get Direction</a>
+                                                            <p><span> Agricultural </span> Lawyer</p>
+                                                            <a class="underline-hover" href="#">Learn More</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -138,8 +138,8 @@
                                                             <img src="img/icon/conunter-icon3.png" alt="">
                                                         </div>
                                                         <div class="counter-number">
-                                                            <p>Positive <span>review</span></p>
-                                                            <a class="underline-hover" href="#">Get Direction</a>
+                                                            <p>Food <span>Scientist</span></p>
+                                                            <a class="underline-hover" href="#">Learn More</a>
                                                         </div>
                                                     </div>
                                                 </div>

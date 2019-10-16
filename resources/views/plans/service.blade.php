@@ -42,23 +42,23 @@
                         <p>${{$plan->cost}}/<span>month</span></p>
                     </div>
                     <div class="price-content">
-                        <ul>
+                        <ul class="unordered-list">
                         @if($plan->name == "FaaS Platform Basic")
                         @foreach($products->take(1) as $product)
-                        <li><i class="fas fa-check-circle"></i>{{$product->title}}</li>
+                        <li class="my-3">{{$product->title}}</li>
                         @endforeach
-                        <li><i class="fas fa-check-circle"></i>10GB Bandwith</li>
-                        <li><i class="fas fa-times-circle"></i>WeekDays Checkup</li>
-                        <li><i class="fas fa-times-circle"></i>Limited Support</li>
+                        <li class="my-3">10GB Bandwith</li>
+                        <li class="my-3"></i>WeekDays Checkup</li>
+                        <li class="my-3"></i>Limited Support</li>
                         @elseif($plan->name == "FaaS Platform Standard")
                         @foreach($products->take(2) as $product)
-                        <li><i class="fas fa-check-circle"></i>{{$product->title}}</li>
+                        <li class="my-3">{{$product->title}}</li>
                         @endforeach
-                        <li><i class="fas fa-times-circle"></i>Weekly Checkup</li>
-                        <li><i class="fas fa-times-circle"></i>Unlimited Support</li>
+                        <li class="my-3"></i>Weekly Checkup</li>
+                        <li class="my-3"></i>Unlimited Support</li>
                         @elseif($plan->name == "FaaS Platform Premium")
                         @foreach($products as $product)
-                        <li><i class="fas fa-check-circle"></i>{{$product->title}}</li>
+                        <li class="my-3"><i class="fas fa-check-circle"></i>{{$product->title}}</li>
                         @endforeach
                         @endif
                         </ul>
@@ -68,7 +68,7 @@
                         <div class="form-group">
                             <input type="hidden" value="{{$plan->stripe_plan}}" class="form-control"  name="plan">
                         </div>
-                        <button type="submit" class="button boxed-btn primary" @if(Auth::user()->subscribedToPlan($plan->stripe_plan, 'Windsey FaaS Platform')) disabled @endif >Subscribe</button>
+                        <button type="submit" class="button boxed-btn primary" @if(Auth::check() && Auth::user()->subscribedToPlan($plan->stripe_plan, 'Windsey FaaS Platform')) disabled @endif >Subscribe</button>
                     </form>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
                 <div class="col-xl-4 col-md-4">
                     <div class="single-address text-center">
                         <div class="addres-icon">
-                            <img src="{{ asset('img/icon/1.png" alt="">
+                            <img src="{{ asset('img/icon/1.png') }}" alt="">
                         </div>
                         <h3>Our Location</h3>
                         <p>127, Manchaster city, London <br>
@@ -17,7 +17,7 @@
                 <div class="col-xl-4 col-md-4">
                     <div class="single-address text-center">
                         <div class="addres-icon">
-                            <img src="{{ asset('img/icon/2.png" alt="">
+                            <img src="{{ asset('img/icon/2.png') }}" alt="">
                         </div>
                         <h3>Opening hour</h3>
                         <p>Mon-Fri (9.00-19.00) <br>
@@ -27,7 +27,7 @@
                 <div class="col-xl-4 col-md-4">
                     <div class="single-address text-center">
                         <div class="addres-icon">
-                            <img src="{{ asset('img/icon/3.png" alt="">
+                            <img src="{{ asset('img/icon/3.png') }}" alt="">
                         </div>
                         <h3>Drop a message</h3>
                         <p>support@durg.com <br>
@@ -47,7 +47,7 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-3 col-xl-4">
                     <div class="single-footer-widget footer_1">
-                        <a href="index.html"> <img src="img/footer-logo.png" alt=""> </a>
+                        <a href="index.html"> <img src="{{ asset('img/logo3.png') }}" alt=""> </a>
                         <p>Waters make fish every without firmament saw had. Morning air subdue very one. Whales grass
                             is fish whales winged.</p>
                         <div class="social-links">

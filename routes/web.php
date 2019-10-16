@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
+Route::get('/projects', function () {
+    return view('pages.project');
+});
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
 Route::get('/about', function () {
     return view('pages.about');
 });

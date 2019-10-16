@@ -32,7 +32,7 @@
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo-img">
                             <a href="{{ url('/') }}">
-                                <img src="img/logo.png" alt="{{ config('app.name', 'Laravel') }}">
+                                <img src="img/logo3.png" style="width: 100px; height: 100px;" alt="{{ config('app.name', 'Laravel') }}">
                             </a>
                         </div>
                     </div>
@@ -45,9 +45,9 @@
                                     <li><a class="active" href="{{ url('/') }}">Home</a></li>
                                     <li><a href="/about">About</a></li>
                                     <li><a href="/services">Services</a></li>
-                                    <li><a href="project.html">Projects</a></li>
+                                    <li><a href="/projects">Projects</a></li>
                                     <li><a href="/plans">Plans</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="/contact">Contact</a></li>
                                     @else
                                     <li><a class="active" href="{{ url('/dashboard') }}">Dashboard</a></li>
                                     @endguest
@@ -84,15 +84,7 @@
                         <div class="mobile_menu d-block d-lg-none"></div>
                     </div>
                 </div>
-                <div class="search_input" id="search_input_box">
-                    <div class="container ">
-                        <form class="d-flex justify-content-between search-inner">
-                            <input type="text" class="form-control" id="search_input" placeholder="Search Here">
-                            <button type="submit" class="btn"></button>
-                            <span class="fa fa-close" id="close_search" title="Close Search"></span>
-                        </form>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
