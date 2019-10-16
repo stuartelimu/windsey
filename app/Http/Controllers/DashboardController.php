@@ -27,9 +27,16 @@ class DashboardController extends Controller
             $services = $services->take(0);
         }
 
+        if ($user->hasPaymentMethod()) {
+            // get default payment method
+            $paymentMethod = $user->defaultPaymentMethod();
+        }
+
         return view('dashboard', [
+            'user' => $user,
             'services' => $services,
             'plan' => $plan,
+            'intent' => $user->createSetupIntent(),
         ]);
     }
 }

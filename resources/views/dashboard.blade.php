@@ -230,11 +230,25 @@
                                     <h3>Payment methods</h3>
                                     <p>Please enter your preferred payment method below. You can use a credit / debit card. 
                                     </p>
-                                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                                    @if($user->hasPaymentMethod())
+                                    <div class="addres-area black-bg px-5 py-3 mb-5">
+                                        <div class="row">
+                                            <div class="col-12">
+                                            <div class="single-address">
+                                                <p class="text-white" >{{$user->defaultPaymentMethod()->billing_details->name}} xxxxx-{{$user->defaultPaymentMethod()->card->last4}} &nbsp; <a href="#" class="genric-btn default-border small">Current</a></p>
+                                                <p class="text-white">Expires {{$user->defaultPaymentMethod()->card->exp_month}}/{{$user->defaultPaymentMethod()->card->exp_year}} &nbsp; </p>
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+                                    <form class="form-contact contact_form" action="{{ action('ProfilesController@store') }}" method="post" id="payment-form" novalidate="novalidate">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name On Card'" placeholder="Enter Name On Card">
+                                                    <input class="form-control" name="subject" id="card-holder-name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name On Card'" placeholder="Enter Name On Card">
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -247,7 +261,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group mt-3">
-                                            <button type="submit" class="button button-contactForm boxed-btn">Update</button>
+                                            <button id="card-button" type="submit" class="button button-contactForm boxed-btn" data-secret="{{ $intent->client_secret }}">Update</button>
                                         </div>
                                     </form>
                                 </div>

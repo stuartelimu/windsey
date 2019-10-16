@@ -35,7 +35,7 @@ class ProfilesController extends Controller
     public function store(Request $request)
     {
         $user = auth()->user();
-        
+
         $user->createAsStripeCustomer();
 
         $paymentMethod = $request->input('stripeToken');
@@ -47,7 +47,9 @@ class ProfilesController extends Controller
         $user->updateDefaultPaymentMethodFromStripe();
         
 
-        echo $paymentMethod;
+        // echo $paymentMethod;
+
+        return back()->with('success', 'Thank you, your credit card has been added');
 
         // return view('profiles.index', [
         //     'user' => $user,
