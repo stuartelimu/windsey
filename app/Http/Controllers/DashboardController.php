@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Product;
+use App\Plan;
+
 
 class DashboardController extends Controller
 {
@@ -12,6 +14,7 @@ class DashboardController extends Controller
     {
         $user = auth()->user();
 
+        $plans = Plan::all();
         $services = Product::all();
         $plan = "No plan";
         if ($user->subscribedToPlan('plan_FyGxPNsipLhdEL', 'Windsey FaaS Platform')) {
@@ -36,6 +39,7 @@ class DashboardController extends Controller
             'user' => $user,
             'services' => $services,
             'plan' => $plan,
+            'plans' => $plans,
             'intent' => $user->createSetupIntent(),
         ]);
     }

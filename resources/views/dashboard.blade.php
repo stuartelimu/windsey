@@ -150,18 +150,49 @@
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                             <div class="details-wrap">
-                                <div class="details-thumb">
-                                    <img src="img/service/service-details.jpg" alt="">
+                                <div class="addres-area black-bg px-5 pb-5 mb-5">
+                                    <div class="row">
+                                        <div class="col-12">
+                                        <div class="single-address">
+                                            
+                                            <h3>You're currently subscribed to: {{$plan}}</h3>
+                                            <p>Choose any of the plans below if you would like to change.</p>
+                                            <p>If you are not sure of the plan's services, you can check them out  <a class="underline-hover" href="/plans">here</a></p>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="details-info">
-                                    <h3>Compatibility</h3>
-                                    <p>Two midst that won't place waters likeness. Them place good. Darkness meat
-                                        moved creeping whales firmament light so were from and given saying light
-                                        was his fruitful two. Creature saying in was heaven appear in dominion can't
-                                        sixth heaven winged lights bearing evening likeness. Above man thing. Fourth
-                                        lights. That had you're stars. You subdue form days years likeness female.
-                                    </p>
-                                </div>
+                                <div class="counter-area mb-5">
+                                    <div class="container">
+                                        <div class="row">
+                                            @foreach($plans as $plan)
+                                            @if(Auth::user()->subscribedToPlan($plan->stripe_plan, 'Windsey FaaS Platform'))
+                                            @else 
+                                            <div class="col-xl-4 col-md-4">
+                                                <div class="single-counter">
+                                                    <div class="icon">
+                                                        <img src="img/icon/conunter-icon.png" alt="">
+                                                    </div>
+                                                    <div class="counter-number">
+                                                        <p>{{$plan->name}} <span>$ {{$plan->cost}}</span> </p>
+                                                        <a class="underline-hover" href="#">Get Direction</a>
+                                                        <form action="{{ action('PlansController@store') }}" method="post" class="price-button">
+                                                            @csrf
+                                                            <div class="form-group">
+                                                                <input type="hidden" value="{{$plan->stripe_plan}}" class="form-control"  name="plan">
+                                                            </div>
+                                                            <button type="submit" class="button boxed-btn primary"  >Subscribe</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
+                                            @endforeach
+                                            
+                                        </div>
+                                    </div>
+                                </div>  
                                 <div class="details-info">
                                     <h3>Speciality</h3>
                                     <p>Two midst that won't place waters likeness. Them place good. Darkness meat

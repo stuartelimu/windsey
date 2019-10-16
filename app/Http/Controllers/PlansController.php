@@ -57,6 +57,12 @@ class PlansController extends Controller
         
         $paymentMethod = $user->defaultPaymentMethod()->id;
         
+        if ($user->subscribed('Windsey FaaS Platform') && ! $user->subscribedToPlan($plan, 'Windsey FaaS Platform')) {
+            // This user is changing plans
+            $user->subscription('Windsey FaaS Platform')->swap($plan);
+            return redirect()->back()->with('success', 'Your plan subscribed successfully');
+        }
+
         $user->newSubscription($subscription, $plan)->create($paymentMethod);
 
         // echo $paymentMethod;
