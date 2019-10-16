@@ -35,6 +35,7 @@ class ProfilesController extends Controller
     public function store(Request $request)
     {
         $user = auth()->user();
+        
         $user->createAsStripeCustomer();
 
         $paymentMethod = $request->input('stripeToken');

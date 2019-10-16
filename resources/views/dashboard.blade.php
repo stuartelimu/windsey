@@ -12,7 +12,7 @@
                         <ul class="nav" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                    aria-controls="home" aria-selected="true">FaaS Platform Standard</a>
+                                    aria-controls="home" aria-selected="true">{{$plan}}</a>
                             </li>
                             
                             <li class="nav-item">
@@ -45,8 +45,15 @@
                                     <div class="row">
                                         <div class="col-12">
                                         <div class="single-address">
-                                            <h3>Our Location</h3>
-                                            <p>127, Manchaster city, London</p>
+                                            @if($services->count() > 0)
+                                            <h3>You're currently subscribed to: {{$plan}}</h3>
+                                            @foreach($services as $service)
+                                            <p>{{$service->title}}</p>
+                                            @endforeach
+                                            @else
+                                            <h3>You're not subscribed to any plan</h3>
+                                            <p>Please subscribe to any <a class="underline-hover" href="/plans">plan</a> to access our services</p>
+                                            @endif
                                         </div>
                                         </div>
                                     </div>
@@ -178,17 +185,17 @@
                                         
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                                <input class="form-control valid" name="name" id="name" type="text" value="{{Auth::user()->name}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                                <input class="form-control valid" name="email" id="email" type="email" value="{{Auth::user()->email}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="telephone" id="telephone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone'" placeholder="Telephone">
+                                                <input class="form-control valid" name="telephone" id="telephone" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone'" placeholder="Telephone">
                                             </div>
                                         </div>
                                         <div class="col-12">

@@ -19,9 +19,8 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+
+Route::get('/dashboard', 'DashboardController@index');
 
 Auth::routes();
 Route::get('/services/service-details/', 'ProductsController@details');

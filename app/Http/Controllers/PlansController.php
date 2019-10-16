@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Product;
+use App\Plan;
+
+
 class PlansController extends Controller
 {
     /**
@@ -13,7 +17,13 @@ class PlansController extends Controller
      */
     public function index()
     {
-        return view('plans.service');
+        $products = Product::all();
+        $plans = Plan::all();
+        
+        return view('plans.service', [
+            'products' => $products,
+            'plans' => $plans
+        ]);
     }
 
     /**
@@ -34,6 +44,11 @@ class PlansController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request->user() && ! $request->user()->hasPaymentMethod()) {
+            // This user is not a paying customer...
+            return redirect('dashboard')->with('error', 'please update your information');
+        }
+
         $subscription = "Windsey FaaS Platform";
         $plan = $request->input('plan');
         $user = auth()->user();
@@ -41,7 +56,6 @@ class PlansController extends Controller
         // $user->createAsStripeCustomer();
         
         $paymentMethod = $user->defaultPaymentMethod()->id;
-
         
         $user->newSubscription($subscription, $plan)->create($paymentMethod);
 
@@ -61,7 +75,7 @@ class PlansController extends Controller
      */
     public function show($id)
     {
-        return view('plans.index');
+        // return view('plans.index');
     }
 
     /**

@@ -34,31 +34,46 @@
                 </div>
             </div>
             <div class="row">
+                @foreach($plans as $plan)
                 <div class="col-xl-4 col-md-4">
                     <div class="single-price">
                     <div class="price-head">
-                        <h2>FaaS Platform Basic</h2>
-                        <p>$0/<span>month</span></p>
+                        <h2>{{$plan->name}}</h2>
+                        <p>${{$plan->cost}}/<span>month</span></p>
                     </div>
                     <div class="price-content">
                         <ul>
-                        <li><i class="fas fa-check-circle"></i>5GB Space</li>
+                        @if($plan->name == "FaaS Platform Basic")
+                        @foreach($products->take(1) as $product)
+                        <li><i class="fas fa-check-circle"></i>{{$product->title}}</li>
+                        @endforeach
                         <li><i class="fas fa-check-circle"></i>10GB Bandwith</li>
-                        <li><i class="fas fa-times-circle"></i>15 Email Accounts</li>
-                        <li><i class="fas fa-times-circle"></i>Unlimited Domain</li>
+                        <li><i class="fas fa-times-circle"></i>WeekDays Checkup</li>
+                        <li><i class="fas fa-times-circle"></i>Limited Support</li>
+                        @elseif($plan->name == "FaaS Platform Standard")
+                        @foreach($products->take(2) as $product)
+                        <li><i class="fas fa-check-circle"></i>{{$product->title}}</li>
+                        @endforeach
+                        <li><i class="fas fa-times-circle"></i>Weekly Checkup</li>
                         <li><i class="fas fa-times-circle"></i>Unlimited Support</li>
+                        @elseif($plan->name == "FaaS Platform Premium")
+                        @foreach($products as $product)
+                        <li><i class="fas fa-check-circle"></i>{{$product->title}}</li>
+                        @endforeach
+                        @endif
                         </ul>
                     </div>
                     <form action="{{ action('PlansController@store') }}" method="post" class="price-button">
                         @csrf
                         <div class="form-group">
-                            <input type="hidden" value="plan_FyGxPNsipLhdEL" class="form-control"  name="plan">
+                            <input type="hidden" value="{{$plan->stripe_plan}}" class="form-control"  name="plan">
                         </div>
                         <button type="submit" class="button boxed-btn primary">Subscribe</button>
                     </form>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4">
+                @endforeach
+                <!-- <div class="col-xl-4 col-md-4">
                     <div class="single-price">
                     <div class="price-head">
                         <h2>FaaS Platform Standard</h2>
@@ -105,7 +120,7 @@
                         <button type="submit" class="button boxed-btn primary">Subscribe</button>
                     </form>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
