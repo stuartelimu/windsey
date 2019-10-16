@@ -68,7 +68,7 @@
                         <div class="form-group">
                             <input type="hidden" value="{{$plan->stripe_plan}}" class="form-control"  name="plan">
                         </div>
-                        <button type="submit" class="button boxed-btn primary">Subscribe</button>
+                        <button type="submit" class="button boxed-btn primary" @if(Auth::user()->subscribedToPlan($plan->stripe_plan, 'Windsey FaaS Platform')) disabled @endif >Subscribe</button>
                     </form>
                     </div>
                 </div>

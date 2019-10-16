@@ -180,39 +180,43 @@
                                     <p>Two midst that won't place waters likeness. Them place good. 
                                     </p>
 
-                                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                                    <form class="form-contact contact_form" action="{{ action('ProfilesController@update', $user->id) }}" method="post" id="profileForm">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="PATCH">
                                     <div class="row">
                                         
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="name" id="name" type="text" value="{{Auth::user()->name}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                                <input class="form-control valid" name="name" id="name" type="text" value="{{Auth::user()->name}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name" disabled>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="email" id="email" type="email" value="{{Auth::user()->email}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                                <input class="form-control valid" name="email" id="email" type="email" value="{{Auth::user()->email}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email" disabled>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="telephone" id="telephone" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone'" placeholder="Telephone">
+                                                <input class="form-control valid" name="telephone" id="telephone" type="text" value="{{Auth::user()->profile->telephone}}"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone'" placeholder="Telephone">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input class="form-control" name="Address" id="Address" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Address'" placeholder="Enter Address">
+                                                <input class="form-control" name="address" id="Address" type="text" value="{{Auth::user()->profile->address}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Address'" placeholder="Enter Address">
                                             </div>
                                         </div>
 
                                         <div class="col-12">
                                             <div class="form-group">
             
-                                                <textarea class="form-control w-100" name="bio" id="bio" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter bio'" placeholder=" Bio"></textarea>
+                                                <textarea class="form-control w-100" name="bio" id="bio" cols="30"  rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter bio'" placeholder=" Bio">
+                                                {{Auth::user()->profile->bio}}
+                                                </textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group mt-3">
-                                        <button type="submit" class="button button-contactForm boxed-btn">Update</button>
+                                        <button type="submit" id="profileButton" class="button button-contactForm boxed-btn">Update</button>
                                     </div>
                                 </form>
                                 </div>
@@ -344,6 +348,12 @@ cardElement.mount('#card-element');
 //     }
 //   });
 // });
+
+const pButton = document.getElementById('profileButton');
+const pForm = document.getElementById('profileForm');
+
+pButton.addEventListener('click', () => pForm.submit);
+
 
 const cardHolderName = document.getElementById('card-holder-name');
 const cardButton = document.getElementById('card-button');

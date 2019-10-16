@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Profile;
+
 class ProfilesController extends Controller
 {
     /**
@@ -14,6 +16,8 @@ class ProfilesController extends Controller
     public function index()
     {
         
+
+
     }
 
     /**
@@ -95,7 +99,24 @@ class ProfilesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'telephone' => 'required',
+            'address' => 'required',
+            'bio' => 'required',
+        ]);
+
+        $user = auth()->user();
+
+        $profile = Profile::where('user_id', $id)->first();
+        $profile->telephone = $request->input('telephone');
+        $profile->address = $request->input('address');
+        $profile->bio = $request->input('bio');
+
+        $profile->save();
+
+        return back()->with('success', 'Your Profile was successfully updated');
+        
+
     }
 
     /**
