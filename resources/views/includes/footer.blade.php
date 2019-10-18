@@ -78,9 +78,9 @@
                         <h4>Solutions</h4>
                         <ul>
                             <li><a href="#">Environmental engineering</a></li>
-                            <li><a href="#"> Agricultural engitneering</a></li>
+                            <li><a href="#"> Agricultural engineering</a></li>
                             <li><a href="#">Agricultural Economist</a></li>
-                            <li><a href="#">Mechanical problems</a></li>
+                            <li><a href="#">Animal Geneticist</a></li>
                         </ul>
 
                     </div>

@@ -58,38 +58,7 @@
                             </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="details-wrap">
-                            <div class="section-top-border">
-                                <h3 class="mb-30">Cancelled Subscriptions</h3>
-                                <div class="progress-table-wrap">
-                                    <div class="progress-table">
-                                        <div class="table-head">
-                                            <div class="serial">#</div>
-                                            <div class="country">Name</div>
-                                            <div class="visit">Email</div>
-                                            <div class="percentage">Plan</div>
-                                        </div>
-                                        @foreach($users as $user)
-                                        @if($user->subscription('Windsey FaaS Platform')->onGracePeriod())
-                                        <div class="table-row">
-                                            <div class="serial">{{ $loop->index }}</div>
-                                            <div class="country"> {{$user->name}}</div>
-                                            <div class="visit">{{$user->email}}</div>
-                                            <div class="percentage">
-                                                <div class="progress">
-                                                    <div class="progress-bar color-1" role="progressbar" style="width: 80%"
-                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+                        <!--  -->
                         
                         
                     </div>

@@ -39,35 +39,22 @@
                                         aria-controls="home" aria-selected="true">{{$product->title}}</a>
                                 </li>
                                 @endforeach
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                        aria-controls="profile" aria-selected="false">Mechanical engineering</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                        aria-controls="contact" aria-selected="false">Bridge construction</a>
-                                </li>
                             </ul>
                         </nav>
-                        <a href="#" class="download-brouser">Download broucher</a>
                     </div>
                 </div>
                 <div class="col-xl-8">
                     <div class="single-details">
                         <div class="tab-content" id="myTabContent">
                             @foreach($products as $product)
-                            <div class="tab-pane fade" id="service-{{$product->id}}" role="tabpanel" aria-labelledby="service-{{$product->id}}-tab">
+                            <div class="tab-pane fade @if($loop->index == 0) show active @endif" id="service-{{$product->id}}" role="tabpanel" aria-labelledby="service-{{$product->id}}-tab">
                                 <div class="details-wrap">
                                     <div class="details-thumb">
                                         <img src="{{ asset('img/service/service-details.jpg') }}" alt="">
                                     </div>
                                     <div class="details-info">
-                                        <h3>Compatibility</h3>
-                                        <p>Two midst that won't place waters likeness. Them place good. Darkness meat
-                                            moved creeping whales firmament light so were from and given saying light
-                                            was his fruitful two. Creature saying in was heaven appear in dominion can't
-                                            sixth heaven winged lights bearing evening likeness. Above man thing. Fourth
-                                            lights. That had you're stars. You subdue form days years likeness female.
+                                        <h3>Description</h3>
+                                        <p>{{$product->description}}
                                         </p>
                                     </div>
                                     <div class="details-info">
@@ -82,56 +69,6 @@
                                 </div>
                             </div>
                             @endforeach
-                            <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <div class="details-wrap">
-                                    <div class="details-thumb">
-                                        <img src="{{ asset('img/service/service-details.jpg') }}" alt="">
-                                    </div>
-                                    <div class="details-info">
-                                        <h3>Compatibility</h3>
-                                        <p>Two midst that won't place waters likeness. Them place good. Darkness meat
-                                            moved creeping whales firmament light so were from and given saying light
-                                            was his fruitful two. Creature saying in was heaven appear in dominion can't
-                                            sixth heaven winged lights bearing evening likeness. Above man thing. Fourth
-                                            lights. That had you're stars. You subdue form days years likeness female.
-                                        </p>
-                                    </div>
-                                    <div class="details-info">
-                                        <h3>Speciality</h3>
-                                        <p>Two midst that won't place waters likeness. Them place good. Darkness meat
-                                            moved creeping whales firmament light so were from and given saying light
-                                            was his fruitful two. Creature saying in was heaven appear in dominion can't
-                                            sixth heaven winged lights bearing evening likeness. Above man thing. Fourth
-                                            lights. That had you're stars. You subdue form days years likeness female.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                <div class="details-wrap">
-                                    <div class="details-thumb">
-                                        <img src="{{ asset('img/service/service-details.jpg') }}" alt="">
-                                    </div>
-                                    <div class="details-info">
-                                        <h3>Compatibility</h3>
-                                        <p>Two midst that won't place waters likeness. Them place good. Darkness meat
-                                            moved creeping whales firmament light so were from and given saying light
-                                            was his fruitful two. Creature saying in was heaven appear in dominion can't
-                                            sixth heaven winged lights bearing evening likeness. Above man thing. Fourth
-                                            lights. That had you're stars. You subdue form days years likeness female.
-                                        </p>
-                                    </div>
-                                    <div class="details-info">
-                                        <h3>Speciality</h3>
-                                        <p>Two midst that won't place waters likeness. Them place good. Darkness meat
-                                            moved creeping whales firmament light so were from and given saying light
-                                            was his fruitful two. Creature saying in was heaven appear in dominion can't
-                                            sixth heaven winged lights bearing evening likeness. Above man thing. Fourth
-                                            lights. That had you're stars. You subdue form days years likeness female.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

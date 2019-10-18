@@ -40,34 +40,15 @@
                 <div class="col-xl-4 col-md-4 mb-5">
                     <div class="single-service">
                         <div class="service-thumb">
-                            <img src="img/service/1.jpg" alt="">
+                            <img src="{{ asset('img/project/1.jpg') }}" alt="">
                         </div>
                         <h3>{{$product->title}}</h3>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
-                        <a href="/services/details/" class="read-more">Read More</a>
+                        <p>{!! Str::limit($product->description, 60, ' ...') !!}</p>
+                        <a href="/services/service-details/" class="read-more">Read More</a>
                     </div>
                 </div>
                 @endforeach
-                <div class="col-xl-4 col-md-4">
-                    <div class="single-service">
-                        <div class="service-thumb">
-                            <img src="img/service/2.jpg" alt="">
-                        </div>
-                        <h3>Mechanical engineering</h3>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4 mb-5">
-                    <div class="single-service">
-                        <div class="service-thumb">
-                            <img src="img/service/1.jpg" alt="">
-                        </div>
-                        <h3>Bridge construction</h3>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
+                
             </div>
             @endif
         </div>
