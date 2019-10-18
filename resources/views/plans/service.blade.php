@@ -47,7 +47,7 @@
                         @foreach($products->take(1) as $product)
                         <li class="my-3">{{$product->title}}</li>
                         @endforeach
-                        <li class="my-3">10GB Bandwith</li>
+                        <li class="my-3">1 Consultant</li>
                         <li class="my-3"></i>WeekDays Checkup</li>
                         <li class="my-3"></i>Limited Support</li>
                         @elseif($plan->name == "FaaS Platform Standard")
@@ -58,7 +58,7 @@
                         <li class="my-3"></i>Unlimited Support</li>
                         @elseif($plan->name == "FaaS Platform Premium")
                         @foreach($products as $product)
-                        <li class="my-3"><i class="fas fa-check-circle"></i>{{$product->title}}</li>
+                        <li class="my-3">{{$product->title}}</li>
                         @endforeach
                         @endif
                         </ul>

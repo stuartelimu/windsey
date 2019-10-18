@@ -48,7 +48,11 @@
                                             <div class="country"> {{$user->name}}</div>
                                             <div class="visit">{{$user->email}}</div>
                                             <div class="percentage">
-                                                plan
+                                                @if ($user->subscribedToPlan('plan_FyGxPNsipLhdEL', 'Windsey FaaS Platform')) FaaS Platform Basic 
+                                                @elseif($user->subscribedToPlan('plan_FyGy0Fv9zsAjzj', 'Windsey FaaS Platform')) FaaS Platform Standard
+                                                @else 
+                                                FaaS Platform Premium
+                                                @endif
                                             </div>
                                         </div>
                                         @endif
