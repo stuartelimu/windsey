@@ -357,11 +357,6 @@ cardElement.mount('#card-element');
 //   });
 // });
 
-const pButton = document.getElementById('profileButton');
-const pForm = document.getElementById('profileForm');
-
-pButton.addEventListener('click', () => pForm.submit);
-
 
 const cardHolderName = document.getElementById('card-holder-name');
 const cardButton = document.getElementById('card-button');
