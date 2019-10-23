@@ -34,7 +34,6 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="#" class="download-brouser">Download broucher</a>
                 </div>
             </div>
             <div class="col-xl-8">
@@ -177,7 +176,6 @@
                                                     </div>
                                                     <div class="counter-number">
                                                         <p>{{$plan->name}} <span>$ {{$plan->cost}}</span> </p>
-                                                        <a class="underline-hover" href="#">Get Direction</a>
                                                         <form action="{{ action('PlansController@store') }}" method="post" class="price-button">
                                                             @csrf
                                                             <div class="form-group">
@@ -213,9 +211,8 @@
                                     <p>Two midst that won't place waters likeness. Them place good. 
                                     </p>
 
-                                    <form class="form-contact contact_form" action="{{ action('ProfilesController@update', $user->id) }}" method="post" id="profileForm">
+                                    <form class="form-contact contact_form" method="post" id="profileForm">
                                     @csrf
-                                    <input type="hidden" name="_method" value="PATCH">
                                     <div class="row">
                                         
                                         <div class="col-sm-6">
@@ -228,35 +225,13 @@
                                                 <input class="form-control valid" name="email" id="email" type="email" value="{{Auth::user()->email}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email" disabled>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <input class="form-control valid" name="telephone" id="telephone" type="text" value="{{Auth::user()->profile->telephone}}"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone'" placeholder="Telephone">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <input class="form-control" name="address" id="Address" type="text" value="{{Auth::user()->profile->address}}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Address'" placeholder="Enter Address">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="form-group">
-            
-                                                <textarea class="form-control w-100" name="bio" id="bio" cols="30"  rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter bio'" placeholder=" Bio">
-                                                {{Auth::user()->profile->bio}}
-                                                </textarea>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
-                                    <div class="form-group mt-3">
-                                        <button type="submit" id="profileButton" class="button button-contactForm boxed-btn">Update</button>
-                                    </div>
+                                    
                                 </form>
                                 </div>
                                 <div class="details-info">
-                                    <p>Two midst that won't place waters likeness. Them place good. Darkness meat
-                                        moved creeping whales firmament light so were from and given saying light
-                                        was his fruitful two. 
+                                    <p>If you would like to make changes to your account, please contact <a href="#support" class="underline-hover">support.</a>
                                     </p>
                                 </div>
                             </div>

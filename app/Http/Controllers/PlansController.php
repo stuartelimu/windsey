@@ -52,7 +52,7 @@ class PlansController extends Controller
     {
         if ($request->user() && ! $request->user()->hasPaymentMethod()) {
             // This user is not a paying customer...
-            return redirect('dashboard')->with('error', 'please update your information');
+            return redirect('dashboard')->with('error', 'Please update your billing information');
         }
 
         $subscription = "Windsey FaaS Platform";

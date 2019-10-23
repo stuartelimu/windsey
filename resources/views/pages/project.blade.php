@@ -34,7 +34,7 @@
                             <img src="{{ asset('img/project/project-1.png') }}" alt="">
                         </div>
                         <div class="project-info">
-                            <span>Industrial construction</span>
+                            <span>Agricultural construction</span>
                             <h3>Research and development center</h3>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                             <img src="{{ asset('img/project/project-3.png') }}" alt="">
                         </div>
                         <div class="project-info">
-                            <span>Industrial construction</span>
+                            <span>Agricultural construction</span>
                             <h3>Research and development center</h3>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <img src="{{ asset('img/project/project-5.png') }}" alt="">
                         </div>
                         <div class="project-info">
-                            <span>Industrial construction</span>
+                            <span>Agricultural construction</span>
                             <h3>Research and development center</h3>
                         </div>
                     </div>

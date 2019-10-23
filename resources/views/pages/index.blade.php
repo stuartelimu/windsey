@@ -110,31 +110,31 @@
                 <div class="col-xl-4 col-md-4">
                     <div class="single-service">
                         <div class="service-thumb">
-                            <img src="{{ asset('img/service/1.jpg') }}" alt="">
+                            <img src="{{ asset('img/project/1.jpg') }}" alt="">
                         </div>
-                        <h3>Agricultural construction</h3>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3>Environmental engineering</h3>
+                        <p>There would be nothing to harvest if the conditions for plan ...</p>
+                        <a href="/services/service-details/" class="read-more">Read More</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4">
                     <div class="single-service">
                         <div class="service-thumb">
-                            <img src="{{ asset('img/service/2.jpg') }}" alt="">
+                            <img src="{{ asset('img/project/1.jpg') }}" alt="">
                         </div>
-                        <h3>Mechanical engineering</h3>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3>Agricultural engineering</h3>
+                        <p>If you’re fascinated with the film Transformers, and you enj...</p>
+                        <a href="/services/service-details/" class="read-more">Read More</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4">
                     <div class="single-service">
                         <div class="service-thumb">
-                            <img src="{{ asset('img/service/1.jpg') }}" alt="">
+                            <img src="{{ asset('img/project/1.jpg') }}" alt="">
                         </div>
-                        <h3>Bridge construction</h3>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3>Agricultural Economist</h3>
+                        <p>Our agricultural economists wear different hats. Not only d ...</p>
+                        <a href="/services/service-details/" class="read-more">Read More</a>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                             our projects</h3>
                         <p>Waters make fish every without firmament saw had. <br> Morning air subdue.</p>
                         <div class="more-project">
-                            <a href="#">More Projects</a>
+                            <a href="/projects">More Projects</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                     <div class="project-active owl-carousel">
                         <div class="single-project">
                             <div class="project-thumb">
-                                <img src="{{ asset('img/project/1.jpg') }}" alt="">
+                                <img src="{{ asset('img/service/1.jpg') }}" alt="">
                             </div>
                             <div class="project-info">
                                 <span>Agricultural construction</span>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="single-project">
                             <div class="project-thumb">
-                                <img src="{{ asset('img/project/1.jpg') }}" alt="">
+                                <img src="{{ asset('img/service/2.jpg') }}" alt="">
                             </div>
                             <div class="project-info">
                                 <span>Machine engineering</span>
@@ -178,7 +178,7 @@
                         </div>
                         <div class="single-project">
                             <div class="project-thumb">
-                                <img src="{{ asset('img/project/1.jpg') }}" alt="">
+                                <img src="{{ asset('img/service/2.jpg') }}" alt="">
                             </div>
                             <div class="project-info">
                                 <span>Agricultural construction</span>
@@ -187,7 +187,7 @@
                         </div>
                         <div class="single-project">
                             <div class="project-thumb">
-                                <img src="{{ asset('img/project/1.jpg') }}" alt="">
+                                <img src="{{ asset('img/service/1.jpg') }}" alt="">
                             </div>
                             <div class="project-info">
                                 <span>Machine engineering</span>

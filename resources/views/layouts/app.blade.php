@@ -41,8 +41,10 @@
 <body>
 
     @include('includes.header')
-
+    <div class="container mt-3">
     @include('includes.messages')
+    </div>
+    
 
     @yield('content')
     

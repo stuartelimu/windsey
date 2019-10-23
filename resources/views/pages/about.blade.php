@@ -167,7 +167,7 @@
                         </div>
                         <div class="team-info text-center">
                             <h3>Miller Jonson</h3>
-                            <p>Agricultural engineer</p>
+                            <p>Animal Geneticist</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                         </div>
                         <div class="team-info text-center">
                             <h3>Aristetol Smith</h3>
-                            <p>Agricultural engineer</p>
+                            <p>Agricultural Economist</p>
                         </div>
                     </div>
                 </div>
@@ -213,8 +213,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <p class="about-text">Waters make fish every without firmament saw had. Morning air subdue
-                                very one. Whales grass is fish whales winged.</p>
+                            <p class="about-text">We believe there is more to agribusiness than just selling produce. Legal services for farm land, sales management and agricultural logistics are much on demand but no one is providing these services. Our project fills that gap.</p>
                             <div class="about-author">
                                 <div class="autor-thumb">
                                     <img src="{{ asset('img/about/about-author.jpg') }}" alt="">
@@ -249,8 +248,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <p class="about-text">Waters make fish every without firmament saw had. Morning air subdue
-                                very one. Whales grass is fish whales winged.</p>
+                            <p class="about-text">We believe there is more to agribusiness than just selling produce. Legal services for farm land, sales management and agricultural logistics are much on demand but no one is providing these services. Our project fills that gap.</p>
                             <div class="about-author">
                                 <div class="autor-thumb">
                                     <img src="{{ asset('img/about/about-author.jpg') }}" alt="">
@@ -285,8 +283,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <p class="about-text">Waters make fish every without firmament saw had. Morning air subdue
-                                very one. Whales grass is fish whales winged.</p>
+                            <p class="about-text">We believe there is more to agribusiness than just selling produce. Legal services for farm land, sales management and agricultural logistics are much on demand but no one is providing these services. Our project fills that gap.</p>
                             <div class="about-author">
                                 <div class="autor-thumb">
                                     <img src="{{ asset('img/about/about-author.jpg') }}" alt="">
@@ -324,7 +321,7 @@
                         is
                         fish <br> whales winged.</p>
                     <div class="cta-btn">
-                        <a class="boxed-btn2 black-bg" href="#">Discuss now <i
+                        <a class="boxed-btn2 black-bg" href="/contact">Discuss now <i
                                 class="Flaticon flaticon-right-arrow"></i></a>
                     </div>
                 </div>
